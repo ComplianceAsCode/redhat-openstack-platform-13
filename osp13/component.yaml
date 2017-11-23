@@ -26,12 +26,12 @@ satisfies:
   narrative:
     - key: a
       text: |
-        '//*
-        Red Hat OpenStack Platform 13 Administrators  are responsible for alerting personnel 
-        or roles in the event of an audit processing failure. A successful 
-        control response will outline the process taken to alert personnel 
-        when an auditing failure occures.
-        */'
+        '// TEMPLATE TEXT
+        // Red Hat OpenStack Platform 13 Administrators  are responsible for alerting personnel 
+        // or roles in the event of an audit processing failure. A successful 
+        // control response will outline the process taken to alert personnel 
+        // when an auditing failure occures.
+        '
     - key: b
       text: |
         '//*
