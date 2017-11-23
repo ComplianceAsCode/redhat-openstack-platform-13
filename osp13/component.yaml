@@ -1,6 +1,6 @@
 ---
 documentation_complete: false
-name: Audit and Accountability
+name: Red Hat OpenStack Platform 13
 schema_version: 3.0.0
 satisfies:
 
@@ -10,12 +10,16 @@ satisfies:
   implementation_status: none
   narrative:
     - text: |
-        '//*
-        Red Hat OpenStack Platform 13 Administrators are responsible for configuring the 
-        offloading of audit records to a central facility. A successful 
-        control response will outline how audit records are dispatched 
-        to aggregation points.
-        */'
+        '//
+        // OPENSTACK TEMPLATE TEXT
+
+        text text text text test test
+
+        // Red Hat OpenStack Platform 13 Administrators are responsible for configuring the 
+        // offloading of audit records to a central facility. A successful 
+        // control response will outline how audit records are dispatched 
+        // to aggregation points.
+        //'
 
 - control_key: AU-5
   standard_key: NIST-800-53
@@ -24,12 +28,15 @@ satisfies:
   narrative:
     - key: a
       text: |
-        '//*
-        Red Hat OpenStack Platform 13 Administrators  are responsible for alerting personnel 
-        or roles in the event of an audit processing failure. A successful 
-        control response will outline the process taken to alert personnel 
-        when an auditing failure occures.
-        */'
+        '// TEMPLATE TEXT
+        test text
+        
+        text
+        // Red Hat OpenStack Platform 13 Administrators  are responsible for alerting personnel 
+        // or roles in the event of an audit processing failure. A successful 
+        // control response will outline the process taken to alert personnel 
+        // when an auditing failure occures.
+        '
     - key: b
       text: |
         '//*
