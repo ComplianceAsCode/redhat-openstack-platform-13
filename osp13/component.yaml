@@ -13,7 +13,7 @@ satisfies:
         '//
         // OPENSTACK TEMPLATE TEXT
 
-        ------
+        text text text text test test
 
         // Red Hat OpenStack Platform 13 Administrators are responsible for configuring the 
         // offloading of audit records to a central facility. A successful 
