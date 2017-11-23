@@ -29,6 +29,9 @@ satisfies:
     - key: a
       text: |
         '// TEMPLATE TEXT
+        test text
+        
+        text
         // Red Hat OpenStack Platform 13 Administrators  are responsible for alerting personnel 
         // or roles in the event of an audit processing failure. A successful 
         // control response will outline the process taken to alert personnel 
