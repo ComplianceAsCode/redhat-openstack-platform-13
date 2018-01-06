@@ -1,8 +1,13 @@
 ---
 documentation_complete: false
-name: Red Hat OpenStack Platform 13
+name: Red Hat OpenStack Platform v13
 schema_version: 3.0.0
 satisfies:
+##
+## BEGIN SECTION:
+## ACCESS CONTROL
+##
+
 #
 # AC-2(2) NOTES:
 #       The customer will be responsible for automatically removing or
@@ -36,18 +41,18 @@ satisfies:
   implementation_status: none
   narrative:
     - text: |
-        'Red Hat OpenStack Platform 13 relies upon 3rd party authentication providers, such as
-        Microsoft Active Directory, Red Hat IdM, or LDAP. By relying on 3rd
-        party authentication providers, Red Hat OpenStack Platform 13 is not responsible for
-        automatic disablement of inactive accounts after a configured period
-        of time.
+        'Red Hat OpenStack Platform 13 relies upon 3rd party authentication
+        providers, such as Microsoft Active Directory, Red Hat IdM, or LDAP.
+        By relying on 3rd party authentication providers, Red Hat OpenStack
+        Platform 13 is not responsible for automatic disablement of inactive
+        accounts after a configured period of time.
 
-        Refer to the LDAP Authentication section of the Red Hat OpenStack Platform 13
-        Administrators Guide for configuration references to 3rd parties, e.g.
-        configuration of Kerberos cross-realm trusts with Active Directory.
-        The guide can be found at:
+        Refer to the LDAP Authentication section of the Red Hat OpenStack
+        Platform 13 Administrators Guide for configuration references to 3rd
+        parties, e.g. configuration of Kerberos cross-realm trusts with
+        Active Directory. The guide can be found at:
 
-        https://docs.openshift.com/container-platform/3.3/admin_solutions/authentication.html#ldap-auth'
+        https://docs.openshift.com/container-platform/3.3/admin_solutions/
 
 - control_key: AC-2 (4)
   standard_key: NIST-800-53
@@ -62,10 +67,11 @@ satisfies:
         the personnel or roles that must be notified of account management
         activities, and the means by which notifications occur.>
 
-        <Red Hat OpenStack Platform 13 will log events to standardized files, however automatic
-        notification (outside of generating  audit data) is not possible. As an
-        Red Hat OpenStack Platform 13 Container Platform cluster administrator, you can deploy the
-        EFK stack to aggregate logs for a range of Red Hat OpenStack Platform 13 Container Platform
+        Red Hat OpenStack Platform 13 will log events to standardized files,
+        however automatic notification (outside of generating  audit data) is
+        not possible. As an Red Hat OpenStack Platform 13 Container Platform
+        cluster administrator, you can deploy the EFK stack to aggregate logs
+        for a range of Red Hat OpenStack Platform 13 Container Platform
         services and setup alerting.
 
         Application developers can view the logs of the projects for which they
@@ -74,10 +80,10 @@ satisfies:
         pods.
 
         For documentation on how to setup Elasticsearch, Fluentd, and Kibana,
-        refer to the Aggregate Logging" section of the Red Hat OpenStack Platform 13 Installation
-        and Configuration Guide:
+        refer to the Aggregate Logging" section of the Red Hat OpenStack
+        Platform 13 Installation and Configuration Guide:
 
-        https://docs.openshift.com/container-platform/3.3/install_config/aggregate_logging.html
+        https://tbd/
         */'
 
 - control_key: AC-2 (5)
@@ -87,9 +93,9 @@ satisfies:
   narrative:
     - text: |
         '//*
-        Within Red Hat OpenStack Platform 13, the sessionMaxAgeSeconds variable in the
-        master-config.yaml file controls when/if users must logout after a
-        period of inactivity.
+        Within Red Hat OpenStack Platform 13, the sessionMaxAgeSeconds
+        variable in the master-config.yaml file controls when/if users must
+        logout after a period of inactivity.
         */'
 
 - control_key: AC-2 (10)
@@ -114,12 +120,12 @@ satisfies:
   narrative:
     - text: |
         '//*
-        Documentation on Red Hat OpenStack Platform 13 Authorization frameworks can be found
-        online. Each Red Hat OpenStack Platform 13 deployment may chose differing authorization
-        processes/configurations. Documentation can be found at:
+        Documentation on Red Hat OpenStack Platform 13 Authorization
+        frameworks can be found online. Each Red Hat OpenStack Platform 13
+        deployment may chose differing authorization processes/configurations.
+        Documentation can be found at:
 
-        https://docs.openshift.com/container-platform/3.3/architecture/
-        additional_concepts/authorization.html
+        https://tbd/
         */'
 
 - control_key: AC-4
@@ -135,11 +141,11 @@ satisfies:
         need to address the customer information flow control policies,
         as well as mechanisms in place to enforce those policies.>
 
-        <A review of Red Hat OpenStack Platform 13 v3 networking can be found in the Red Hat OpenStack Platform 13
+        A review of Red Hat OpenStack Platform 13 v3 networking can be found
+        in the Red Hat OpenStack Platform 13
         Architecture guide:
 
-        https://docs.openshift.com/container-platform/3.3/architecture/
-        additional_concepts/networking.html
+        https://tbd
         */'
 
 - control_key: AC-4 (21)
@@ -297,13 +303,13 @@ satisfies:
     - key: a
       text: |
         'Not applicable. When AC-2(5) is implemented, the non-configurable
-        default behavior of Red Hat OpenStack Platform 13 is to disconnect the idle users
-        from the management console after 15 minutes.'
+        default behavior of Red Hat OpenStack Platform 13 is to disconnect the
+        idle users from the management console after 15 minutes.'
     - key: b
       text: |
         'Not applicable. When AC-2(5) is implemented, the non-configurable
-        default behavior of Red Hat OpenStack Platform 13 is to disconnect the idle users
-        from the management console after 15 minutes.'
+        default behavior of Red Hat OpenStack Platform 13 is to disconnect the
+        idle users from the management console after 15 minutes.'
 
 
 - control_key: AC-11 (1)
@@ -313,8 +319,8 @@ satisfies:
   narrative:
     - text: |
         'Not applicable. When AC-2(5) is implemented, the non-configurable
-        default behavior of Red Hat OpenStack Platform 13 is to disconnect idle users from the
-        management console after 15 minutes.'
+        default behavior of Red Hat OpenStack Platform 13 is to disconnect
+        idle users from the management console after 15 minutes.'
 
 - control_key: AC-12
   standard_key: NIST-800-53
@@ -337,8 +343,9 @@ satisfies:
   narrative:
     - text: |
         'All system events, regardless of local or remote, are captured through
-        the Red Hat OpenStack Platform 13 and underlying Red Hat Enterprise Linux audit subsystem.
-        This control is inherently met when auditing is enabled.'
+        the Red Hat OpenStack Platform 13 and underlying Red Hat Enterprise
+        Linux audit subsystem. This control is inherently met when auditing
+        is enabled.'
 
 - control_key: AC-17 (2)
   standard_key: NIST-800-53
@@ -346,8 +353,9 @@ satisfies:
   implementation_status: none
   narrative:
     - text: |
-        'Red Hat OpenStack Platform 13 uses the following cryptographic algorithms and ciphers to
-        protect the confidentiality and integrity of remote access sessions:
+        'Red Hat OpenStack Platform 13 uses the following cryptographic
+        algorithms and ciphers to protect the confidentiality and integrity
+        of remote access sessions:
                 - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
                 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
                 - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
@@ -383,19 +391,21 @@ satisfies:
   narrative:
     - text: |
         '//*
-        Red Hat OpenStack Platform 13 utilizes the firewall technology embedded into Red Hat
-        Enterprise Linux. This technology, named firewalld, allows a system
-        administrator to configure host-bsaed rules which take effect
-        immediately. This gives an Red Hat OpenStack Platform 13 operator the ability to immediately
-        drop all remote connections. For additional information on embedded
+        Red Hat OpenStack Platform 13 utilizes the firewall technology
+        embedded into Red Hat Enterprise Linux. This technology, named
+        firewalld, allows a system administrator to configure host-bsaed
+        rules which take effect immediately. This gives an Red Hat OpenStack
+        Platform 13 operator the ability to immediately drop all remote
+        connections. For additional information on embedded
         firewall capabilities, refer to the *Using Firewalls* section of the
         Red Hat Enterprise Linux 7 Security Guide:
 
-        https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/sec-Using_Firewalls.html
+        https://tbd/
 
-        Additionally, Red Hat OpenStack Platform 13 nodes may be placed into Maintenance Mode. This
-        designation will migrate applications from a given cluster node to
-        another, disconnecting any active sessions to a given cluster node.
+        Additionally, Red Hat OpenStack Platform 13 nodes may be placed into
+        Maintenance Mode. This designation will migrate applications from a
+        given cluster node to another, disconnecting any active sessions to a
+        given cluster node.
 
         If immediate disconnect of all hosted applications are desired,
         individual containers may be halted. This will disconnect user sessions
@@ -409,20 +419,29 @@ satisfies:
   narrative:
     - text: |
         '//*
-        Given the data center focus of Red Hat OpenStack Platform 13 deployments, it is likely
-        this requirement is not applicable. A successful control response will
-        document how, if wireless connectivity is permitted, users and devices
+        Given the data center focus of Red Hat OpenStack Platform 13
+        deployments, it is likely this requirement is not applicable. A
+        successful control response will document how, if wireless
+        connectivity is permitted, users and devices
         authenticate to the wireless network.
         */'
+##
+## BEGIN SECTION:
+## AWARENESS AND TRAINING
+##
 
 # Awareness and Training controls have been moved.
-# 
+#
 # For organizational responsibilities relating to Awareness and Training:
 # ../../../customer_cxo_controls/policies/AT-Awareness_and_Training/component.yaml
 #
 # For Project/Program Management Office responsibilities related to Awareness
 # and Training:
 # ../../../customer_cto_controls/policies/AT-Awareness_and_Training/component.yaml
+##
+## BEGINNING SECTION:
+## AUDIT AND ACCOUNTABILITY
+##
 
 - control_key: AU-4 (1)
   standard_key: NIST-800-53
@@ -431,10 +450,10 @@ satisfies:
   narrative:
     - text: |
         '//*
-        Red Hat OpenStack Platform 13 Administrators are responsible for configuring the 
-        offloading of audit records to a central facility. A successful 
-        control response will outline how audit records are dispatched 
-        to aggregation points.
+        Red Hat OpenStack Platform 13 Administrators are responsible for
+        configuring the offloading of audit records to a central facility.
+        A successful control response will outline how audit records are
+        dispatched to aggregation points.
         */'
 
 - control_key: AU-5
@@ -445,19 +464,19 @@ satisfies:
     - key: a
       text: |
         '//*
-        Red Hat OpenStack Platform 13 Administrators  are responsible for alerting personnel 
-        or roles in the event of an audit processing failure. A successful 
-        control response will outline the process taken to alert personnel 
-        when an auditing failure occures.
+        Red Hat OpenStack Platform 13 Administrators  are responsible for
+        alerting personnel or roles in the event of an audit processing
+        failure. A successful control response will outline the process
+        taken to alert personnel when an auditing failure occures.
         */'
     - key: b
       text: |
         '//*
-        In the event of an audit processing failure, Red Hat OpenStack Platform 13 Administrators
-        are responsible for: overwriting the oldest audit records for low 
-        impact systems and shutting down moderate impact systems. A successful
-        control response will outline the actions taken when an auditing 
-        failure occurs.
+        In the event of an audit processing failure, Red Hat OpenStack
+        Platform 13 Administrators are responsible for: overwriting the oldest
+        audit records for low impact systems and shutting down moderate impact
+        systems. A successful control response will outline the actions taken
+        when an auditing failure occurs.
         */'
 
 - control_key: AU-7
@@ -467,9 +486,11 @@ satisfies:
   narrative:
     - key: a
       text: |
-        'Red Hat OpenStack Platform 13 embeds the Elasticsearch, Fluentd, and Kibana (EFK) stack.
+        'Red Hat OpenStack Platform 13 embeds the Elasticsearch, Fluentd, and
+        Kibana (EFK) stack.
         This pre-integrated audit reduction capability aggregates logs from
-        nodes and applications running inside your Red Hat OpenStack Platform 13 Container Platform.
+        nodes and applications running inside your Red Hat OpenStack Platform
+        13 Container Platform.
         Once deployed it uses Fluentd to aggregate log events from all the
         nodes, projects, and pods into Elasticsearch (ES). It also provides a
         centralized Kibana web UI where users and administrators can create
@@ -492,14 +513,15 @@ satisfies:
 
     - key: b
       text: |
-        'Red Hat OpenStack Platform 13 logging subsystems do not alter the original contents
-        or time ordering of audit records.' 
+        'Red Hat OpenStack Platform 13 logging subsystems do not alter the
+        original contents or time ordering of audit records.'
 
 #       ADMINISTRATORS NOTE FOR AU-7(b):
-#       Red Hat OpenStack Platform 13 can be configured to rely upon the underlying audit subsystem
-#       of Red Hat Enterprise Linux. This subsystem has undergone Common
-#       Criteria certification testing which verified log integrity during
-#       remote transmittal. Certification documents can be found publicly at:
+#       Red Hat OpenStack Platform 13 can be configured to rely upon the
+#       underlying audit subsystem of Red Hat Enterprise Linux. This subsystem
+#       has undergone Common Criteria certification testing which verified log
+#       integrity during remote transmittal. Certification documents can be
+#       found publicly at:
 #
 #       https://www.redhat.com/en/technologies/industries/government/standards
 
@@ -525,20 +547,20 @@ satisfies:
   narrative:
     - key: a
       text: |
-        'Red Hat OpenStack Platform 13 logs are generated using the internal system clock by
-        default. This is non-configurable behavior.'
+        'Red Hat OpenStack Platform 13 logs are generated using the internal
+        system clock by default. This is non-configurable behavior.'
 
     - key: b
       text: |
-        'Red Hat OpenStack Platform 13 time keeping relies on the time services provided by the
-        underlying operating system. When running on Red Hat Enterprise Linux,
-        the system time is always kept in Coordinated Universal Time (UTC) and
-        converted in applications to local time as needed. Local time is the
-        actual time on your current time zone, taking into account daylight
-        savings time. 
+        'Red Hat OpenStack Platform 13 time keeping relies on the time services
+        provided by the underlying operating system. When running on Red Hat
+        Enterprise Linux, the system time is always kept in Coordinated
+        Universal Time (UTC) and converted in applications to local time as
+        needed. Local time is the actual time on your current time zone, taking
+        into account daylight savings time.
 
-        Red Hat OpenStack Platform 13 hosts are configured to use UTC by default. To manually
-        verify this, the timedatectl command may be used:
+        Red Hat OpenStack Platform 13 hosts are configured to use UTC by
+        default. To manually verify this, the timedatectl command may be used:
 
         $ timedatectl set-local-rtc no'
 
@@ -556,14 +578,15 @@ satisfies:
   covered_by: []
   implementation_status: none
   narrative:
-#  Customers are responsible for comparing the internal information
-#  system clocks at least hourly with an authoritative time source. A
-#  successful control response will discuss the time source that system
-#  clocks are synced with.
+    #  Customers are responsible for comparing the internal information
+    #  system clocks at least hourly with an authoritative time source. A
+    #  successful control response will discuss the time source that system
+    #  clocks are synced with.
     - key: a
       text: |
-        'Red Hat OpenStack Platform 13 utilizes the time services of the underlying operating
-        system. This control is not applicable to Red Hat OpenStack Platform 13.'
+        'Red Hat OpenStack Platform 13 utilizes the time services of the
+        underlying operating system. This control is not applicable to Red
+        Hat OpenStack Platform 13.'
 
 #  Customers are responsible for synchonizing internal system clocks to
 #  the authoritative time source when the time difference is greater than
@@ -571,12 +594,13 @@ satisfies:
 #  discuss how system clocks are synced.
     - key: b
       text: |
-        'Red Hat OpenStack Platform 13 utilizes the time services of the underyling operating
-        operating system. This control is not applicable to Red Hat OpenStack Platform 13.'
+        'Red Hat OpenStack Platform 13 utilizes the time services of the
+        underyling operating operating system. This control is not applicable
+        to Red Hat OpenStack Platform 13.'
 
 #       ADMINISTATIVE NOTE ON AU-8(1)(b):
-#       To configure network time protocol (NTP) daemon to synchronize 
-#       against NIST time sources, edit the /etc/ntp.conf file (or create one 
+#       To configure network time protocol (NTP) daemon to synchronize
+#       against NIST time sources, edit the /etc/ntp.conf file (or create one
 #       if it does not existing already). The proper format:
 #
 #        server <<time source>> iburst
@@ -595,8 +619,9 @@ satisfies:
 #   are used by the system.
     - key: 'Req. 1'
       text: |
-        'Red Hat OpenStack Platform 13 utilizes the time services of the underyling operating
-        operating system. This control is not applicable to Red Hat OpenStack Platform 13.'
+        'Red Hat OpenStack Platform 13 utilizes the time services of the
+        underyling operating operating system. This control is not applicable
+        to Red Hat OpenStack Platform 13.'
 
 #   Req. 2: Customers are responsible for syncronizing the system clocks of
 #   network computers that run operating systems other than Windows to the
@@ -605,8 +630,9 @@ satisfies:
 #   services are for non-Windows systems.
     - key: 'Req. 2'
       text: |
-        'Red Hat OpenStack Platform 13 utilizes the time services of the underyling operating
-        operating system. This control is not applicable to Red Hat OpenStack Platform 13.'
+        'Red Hat OpenStack Platform 13 utilizes the time services of the
+        underyling operating operating system. This control is not applicable
+        to Red Hat OpenStack Platform 13.'
 
 - control_key: AU-9
   standard_key: NIST-800-53
@@ -634,7 +660,7 @@ satisfies:
         A successful control response will discuss the way that audit records
         are backed up to a system other than the one being audited. This can
         include a centralized repository for all audit records.
-        
+
         To satisfy this control, many information system components offload
         audit records to a central service via AU-4(1).
         */'
@@ -665,8 +691,8 @@ satisfies:
 
         Audit rules may be added/removed through modifying the
         /etc/audit/audit.rules or applicable file under /etc/audit/rules.d/. It
-        is recommended that Red Hat OpenStack Platform 13 specific audit rules be added to
-        /etc/audit/rules.d/openshift.rules.
+        is recommended that Red Hat OpenStack Platform 13 specific audit rules
+        be added to /etc/audit/rules.d/openshift.rules.
         */'
     - key: c
       text: |
@@ -676,6 +702,10 @@ satisfies:
         response will discuss how audit records are generated, and how they meet
         the requirements defined in AU-2 and AU-3.
         */'
+##
+## BEGIN SECTION:
+## SECURITY ASSESSMENT AND AUTHORIZATION
+##
 
 - control_key: CA-2
   standard_key: NIST-800-53
@@ -736,6 +766,11 @@ satisfies:
         as well as the process by which POA&M items will be updated and
         remediated.
         */'
+##
+## BEGIN SECTION:
+## CONFIGURATION MANAGEMENT
+##
+
 
 # ADMINISTRATORS NOTE ON CM-2:
 #       Implimentation of this control varies greatly between customers. Some
@@ -745,8 +780,9 @@ satisfies:
 #       however it's best to double check with the Information System owner
 #       on expectations (component vs central CM).
 #
-#       In case the customer desires components (e.g. Red Hat OpenStack Platform 13 Admins) to
-#       handle configuration management the lines below can be uncommented:
+#       In case the customer desires components (e.g. Red Hat OpenStack
+#       Platform 13 Admins) to handle configuration management the lines
+#       below can be uncommented:
 #
 #- control_key: CM-2
 #  standard_key: NIST-800-53
@@ -780,17 +816,18 @@ satisfies:
 # ADMINISTRATORS NOTE ON CM-2(2):
 #       Implimentation of this control varies between customers. Some create
 #       a central configuration management system, while others expect
-#       information system components (e.g. Red Hat OpenStack Platform 13 Adminstrators) 
-#       to create their own playbooks and store them in the centralized 
-#       service. Other customers delegate this control entirely to 
+#       information system components (e.g. Red Hat OpenStack Platform 13
+#       Adminstrators)
+#       to create their own playbooks and store them in the centralized
+#       service. Other customers delegate this control entirely to
 #       system component administrators.
 #
 #       If CM-6(1) is selected, which is mandatory for FISMA Moderate and
 #       FedRAMP systems, the organization must centrally employ automated
 #       mechanisms for configuration management (e.g. Ansible Tower).
 #
-#       In such cases, a proper response would illistrate how Red Hat OpenStack Platform 13
-#       administrators will provide configuration management content
+#       In such cases, a proper response would illistrate how Red Hat OpenStack
+#       Platform 13 administrators will provide configuration management content
 #       (e.g. Ansible Playbooks) to the central service (e.g. Ansible
 #       Tower).
 #
@@ -824,8 +861,8 @@ satisfies:
 
 # ADMINISTRATORS NOTE ON CM-2(7):
 #       This control relates to organizations issuing equipment, e.g. laptops,
-#       to employees. Unless Red Hat OpenStack Platform 13 is being deployed on mobile equipment
-#       this control is not applicable.
+#       to employees. Unless Red Hat OpenStack Platform 13 is being deployed on
+#       mobile equipment this control is not applicable.
 #
 - control_key: CM-2 (7)
   standard_key: NIST-800-53
@@ -888,9 +925,9 @@ satisfies:
   narrative:
     - text: |
         'To ensure the system can cryptographically verify base software
-        packages of Red Hat OpenStack Platform 13, the yum gpgcheck option must be enabled in the
-        underlying Red Hat Enterprise Linux. This is accomplished by applying 
-        the following Red Hat CCEs:
+        packages of Red Hat OpenStack Platform 13, the yum gpgcheck option must
+        be enabled in the underlying Red Hat Enterprise Linux. This is
+        accomplished by applying the following Red Hat CCEs:
 
                 - CCE-26989-4: Ensure gpgcheck Enabled in Main Yum Configuration
                 - CCE-26957-1: Ensure Red Hat GPG Key Installed
@@ -985,9 +1022,9 @@ satisfies:
         include processes used to detect unauthorized software, or any
         whitelisting used.
 
-        Red Hat OpenStack Platform 13 utilizes trusted container registries to house white-listed
-        container images. The organization should define process for managing
-        said trusted registries to satisfy this control.
+        Red Hat OpenStack Platform 13 utilizes trusted container registries to
+        house white-listed container images. The organization should define
+        process for managing said trusted registries to satisfy this control.
         */'
 
 - control_key: CM-7 (5)
@@ -1031,13 +1068,15 @@ satisfies:
 
 #       ADMINISTRATORS NOTE ON CM-8:
 #       Implimentation of this control varies between customers. Some agencies
-#       maintain an inventory that state "Red Hat OpenStack Platform 13," whereas others want
-#       named RPMs installed on the Red Hat OpenStack Platform 13 components. The vast majority
-#       follow the "Red Hat OpenStack Platform 13" listings. For those that do not, and want
+#       maintain an inventory that state "Red Hat OpenStack Platform 13,"
+#       whereas others want named RPMs installed on the Red Hat OpenStack
+#       Platform 13 components. The vast majority follow the "Red Hat
+#       OpenStack Platform 13" listings. For those that do not, and want
 #       complete listings of underlying RPMs, the following section should be
 #       uncommented and updated.
 #
-#       If Satellite is managing the Red Hat OpenStack Platform 13 nodes, documenting how Red Hat OpenStack Platform 13
+#       If Satellite is managing the Red Hat OpenStack Platform 13 nodes,
+#       documenting how Red Hat OpenStack Platform 13
 #       components integrate into Satellite for centralized inventory management
 #       is perfectly acceptable.
 #
@@ -1050,22 +1089,24 @@ satisfies:
 #      text: |
 #        '//*
 #        The customer will be responsible for developing and documenting an
-#        inventory that meets FedRAMP requirements. A successful control response
-#        will include a description of how the inventory is developed and
-#        documented. This process should ensure that the inventory accurately
-#        reflects the current system, includes and components, is granular enough
-#        to support tracking and reporting, and includes any information the
-#        customer has deemed necessary to achieve effective accountability.
+#        inventory that meets FedRAMP requirements. A successful control
+#        response will include a description of how the inventory is developed
+#        and documented. This process should ensure that the inventory
+#        accurately
+#        reflects the current system, includes and components, is granular
+#        enough to support tracking and reporting, and includes any
+#        information the customer has deemed necessary to achieve
+#        effective accountability.
 #        */'
 #    - key: b
 #      text: |
 #        '//*
 #        The customer will responsible for reviewing and updating the system
 #        inventory at least monthly. This may be performed in conjunction with
-#        continuous monitoring and POA&M tracking activities. A sucessful control
-#        response will need to address the personnel or roles responsible for
-#        updating the system inventory and the process for correcting gaps or
-#        discrepancies found.
+#        continuous monitoring and POA&M tracking activities. A sucessful
+#        control response will need to address the personnel or roles
+#        responsible for updating the system inventory and the process
+#        for correcting gaps or discrepancies found.
 #        */'
 
 - control_key: CM-8 (1)
@@ -1131,6 +1172,10 @@ satisfies:
         continuously. A successful control response will describe the process
         used to monitor compliance of installation policies.
         */'
+##
+## BEGIN SECTION:
+## CONTINGENCY PLANNING
+##
 
 - control_key: CP-9
   standard_key: NIST-800-53
@@ -1220,6 +1265,10 @@ satisfies:
         will need to address how transactions are performed and what occurs in
         the case of failed or conflicting transactions.
         */'
+##
+## BEGIN SECTION:
+## IDENTIFICATION AND AUTHENTICATION
+##
 
 - control_key: IA-2
   standard_key: NIST-800-53
@@ -1234,20 +1283,21 @@ satisfies:
         need to address the credentials used to identify and authenticate
         users, both internal and external if possible.
 
-        As an Red Hat OpenStack Platform 13 Container Platform administrator, you can use groups to
-        manage users, change their permissions, and enhance collaboration. Your
-        organization may have already created user groups and stored them in an
-        LDAP server, such as Active Directory. Red Hat OpenStack Platform 13 Container Platform can
-        sync those LDAP records with internal Red Hat OpenStack Platform 13 Container Platform
-        records, enabling you to manage your groups in one place. Red Hat OpenStack Platform 13
-        Container Platform currently supports group sync with LDAP servers using
+        As an Red Hat OpenStack Platform 13 Container Platform administrator,
+        you can use groups to manage users, change their permissions, and
+        enhance collaboration. Your organization may have already created
+        user groups and stored them in an LDAP server, such as Active
+        Directory. Red Hat OpenStack Platform 13 Container Platform can
+        sync those LDAP records with internal Red Hat OpenStack Platform 13
+        Container Platform records, enabling you to manage your groups in
+        one place. Red Hat OpenStack Platform 13 Container Platform
+        currently supports group sync with LDAP servers using
         three common schemas for defining group membership: RFC 2307, Active
         Directory, and augmented Active Directory. For additional information,
-        refer to “Syncing Groups with LDAP” in the Red Hat OpenStack Platform 13 Installation and
-        Configuration guide:
+        refer to “Syncing Groups with LDAP” in the Red Hat OpenStack Platform
+        13 Installation and Configuration guide:
 
-        https://docs.openshift.com/container-platform/3.3/install_config/
-        syncing_groups_with_ldap.html
+        https://tbd/
         */'
 
 # ADMINISTRATORS NOTE ON IA-2(1):
@@ -1268,20 +1318,20 @@ satisfies:
         authentication for network access to privileged accounts.
 
         A successful control response will need to address all network-
-        accessible privileged account types and the means by which 
+        accessible privileged account types and the means by which
         multifactor authentication is enforced for each.
 
-        Red Hat OpenStack Platform 13 provides a plugable authentication architecture that can
-        utilize 3rd party authentication schemes that include multi-factor
-        authentication. The authentication subsystem in Red Hat OpenStack Platform 13 relies on
-        OAuth 2.0 and any system that can interact with the OAuth token service
-        over HTTPS can recieve authentication tokens. Typically this is
-        implemented using Red Hat OpenStack Platform 13s provided RequestHeaderIdentityProvider as
-        described in Section 12.3.8, Request Header, of the Red Hat OpenStack Platform 13 v3.3
-        Installation and Configuration Guide:
+        Red Hat OpenStack Platform 13 provides a plugable authentication
+        architecture that can utilize 3rd party authentication schemes that
+        include multi-factor authentication. The authentication subsystem in
+        Red Hat OpenStack Platform 13 relies on OAuth 2.0 and any system that
+        can interact with the OAuth token service over HTTPS can recieve
+        authentication tokens. Typically this is implemented using Red Hat
+        OpenStack Platform 13s provided RequestHeaderIdentityProvider as
+        described in Section 12.3.8, Request Header, of the Red Hat OpenStack
+        Platform 13 v3.3 Installation and Configuration Guide:
 
-        https://docs.openshift.com/container-platform/3.3/install_config/
-        configuring_authentication.html#RequestHeaderIdentityProvider
+        https://tbd
         */'
 
 - control_key: IA-2 (2)
@@ -1294,8 +1344,8 @@ satisfies:
         The customer will be responsible for implementing multifactor
         authentication for network access to non-privileged accounts.
         A successful control response will need to address all network-
-        accessible non-privileged account types and the means by which 
-        multifactor authentication is enforced for each. 
+        accessible non-privileged account types and the means by which
+        multifactor authentication is enforced for each.
         */'
 
 - control_key: IA-2 (3)
@@ -1304,7 +1354,7 @@ satisfies:
   implementation_status: none
   narrative:
     - text: |
-        'This control is not applicable to tenants of cloud computing 
+        'This control is not applicable to tenants of cloud computing
         platforms, such as Red Hat OpenStack Platform 13 administrators.'
 
 - control_key: IA-2 (5)
@@ -1313,9 +1363,10 @@ satisfies:
   implementation_status: none
   narrative:
     - text: |
-        'Red Hat OpenStack Platform 13 requires individuals to be authenticated with an individual
-        authenticator prior to any group authenticators being employed. This is
-        default, non-configurable behavior of the Red Hat OpenStack Platform 13 container
+        'Red Hat OpenStack Platform 13 requires individuals to be
+        authenticated with an individual authenticator prior to any group
+        authenticators being employed. This is default, non-configurable
+        behavior of the Red Hat OpenStack Platform 13 container
         platform. All users, remote or local, administrative or non-privileged,
         first authenticate via an individual authenticator. Once individually
         authenticated, group access/privileges will be granted as applicable.'
@@ -1345,7 +1396,7 @@ satisfies:
         authentication such that one of the factors is provided by a device
         separate from the system gaining access. Examples are CAC and PIV
         cards.
-        
+
         A successful control response will need to address all user
         types and the means by which multifactor authentication is enforced
         for each, as well as the strength of mechanism required by the MFA
@@ -1378,12 +1429,12 @@ satisfies:
         The customer will be responsible for ensuring that customer-owned
         infrastructure is  properly authenticated prior to establishing a
         connection to the rest of the customer system. A successful control
-        response will need to address the type of infrastructure in use 
+        response will need to address the type of infrastructure in use
         (e.g. bare metal, virtual machines, etc) and the mechanism by which
-        each is authenticated.  
+        each is authenticated.
 
-        Red Hat OpenStack Platform 13 nodes can be configured with x509/PKI certificates, which
-        will provide identity of the machines.
+        Red Hat OpenStack Platform 13 nodes can be configured with x509/PKI
+        certificates, which will provide identity of the machines.
         */'
 
 - control_key: IA-4
@@ -1658,9 +1709,9 @@ satisfies:
   narrative:
     - text: |
         '//*
-        The customer will be responsible for distributing 
+        The customer will be responsible for distributing
         authenticators in person with proper authorizations in place. A
-        successful control response will need to discuss the 
+        successful control response will need to discuss the
         authenticators in use, the personnel or roles serving as the
         registration authority, and the personnel or roles providing
         authorization for distribution of the authenticators.
@@ -1734,8 +1785,9 @@ satisfies:
         authentication scenarios that might arise and the mechanism used
         to obscure feedback diring each.
 
-        Red Hat OpenStack Platform 13 natively obscures such information. Red Hat OpenStack Platform 13 cannot be
-        configured to be out of compliance with this requirement.
+        Red Hat OpenStack Platform 13 natively obscures such information.
+        Red Hat OpenStack Platform 13 cannot be configured to be out of
+        compliance with this requirement.
         */'
 
 - control_key: IA-7
@@ -1745,14 +1797,15 @@ satisfies:
   narrative:
     - text: |
         '//*
-        Administrative access to Red Hat OpenStack Platform 13 nodes is performed over SSH. To
-        limit SSH ciphers to those algorithms which are FIPS-approved, update
-        the following line in /etc/ssh/sshd_config:
+        Administrative access to Red Hat OpenStack Platform 13 nodes is
+        performed over SSH. To limit SSH ciphers to those algorithms which
+        are FIPS-approved, update the following line in /etc/ssh/sshd_config:
 
         Ciphers aes128,aes192-ctr,aes256-ctr
 
-        The Red Hat OpenStack Platform 13 Console, which is the web interface to the system,
-        automatically converts incoming authentication requests to HTTPS.
+        The Red Hat OpenStack Platform 13 Console, which is the web
+        interface to the system, automatically converts incoming
+        authentication requests to HTTPS.
         */'
 
 - control_key: IA-8
@@ -1836,6 +1889,14 @@ satisfies:
         customer system is through Active Directory Federation Services
         (ADFS).
         */'
+##
+## BEGIN SECTION:
+## INCIDENT RESPONSE
+##
+##
+## BEGIN SECTION:
+## MAINTENANCE
+##
 
 - control_key: MA-2
   standard_key: NIST-800-53
@@ -1918,6 +1979,10 @@ satisfies:
         are completed. A successful control response will need to address
         monitoring and enforcement of the disconnectionr requirement.
         */'
+##
+## BEGIN SECTION:
+## MEDIA PROTECTION
+##
 
 # To date, we have not been asked to complete a Media Protection section. This
 # content is only a placeholder.
@@ -1932,95 +1997,10 @@ satisfies:
 #
 #        This answer can be multi-line.
 #
-#- control_key: MP-2
-#  standard_key: NIST-800-53
-#  covered_by: []
-#  implementation_status: none
-#  narrative:
-#   - text: |
-#        Narrative text on how product can be configured against MP-2.
-#
-#        This answer can be multi-line.
-#
-#- control_key: MP-3
-#  standard_key: NIST-800-53
-#  covered_by: []
-#  implementation_status: none
-#  narrative:
-#   - text: |
-#        Narrative text on how product can be configured against MP-3.
-#
-#        This answer can be multi-line.
-#
-#- control_key: MP-4
-#  standard_key: NIST-800-53
-#  covered_by: []
-#  implementation_status: none
-#  narrative:
-#   - text: |
-#        Narrative text on how product can be configured against MP-4.
-#
-#        This answer can be multi-line.
-#
-#- control_key: MP-5
-#  standard_key: NIST-800-53
-#  covered_by: []
-#  implementation_status: none
-#  narrative:
-#   - text: |
-#        Narrative text on how product can be configured against MP-5.
-#
-#        This answer can be multi-line.
-#
-#- control_key: MP-5 (4)
-#  standard_key: NIST-800-53
-#  covered_by: []
-#  implementation_status: none
-#  narrative:
-#   - text: |
-#        Narrative text on how product can be configured against MP-5 (4).
-#
-#        This answer can be multi-line.
-#
-#- control_key: MP-6
-#  standard_key: NIST-800-53
-#  covered_by: []
-#  implementation_status: none
-#  narrative:
-#   - text: |
-#        Narrative text on how product can be configured against MP-6.
-#
-#        This answer can be multi-line.
-#
-#- control_key: MP-6 (2)
-#  standard_key: NIST-800-53
-#  covered_by: []
-#  implementation_status: none
-#  narrative:
-#   - text: |
-#        Narrative text on how product can be configured against MP-6 (2).
-#
-#        This answer can be multi-line.
-#
-#- control_key: MP-7
-#  standard_key: NIST-800-53
-#  covered_by: []
-#  implementation_status: none
-#  narrative:
-#   - text: |
-#        Narrative text on how product can be configured against MP-7.
-#
-#        This answer can be multi-line.
-#
-#- control_key: MP-7 (1)
-#  standard_key: NIST-800-53
-#  covered_by: []
-#  implementation_status: none
-#  narrative:
-#   - text: |
-#        Narrative text on how product can be configured against MP-7 (1).
-#
-#        This answer can be multi-line.
+##
+## BEGIN SECTION:
+## PHYSICAL AND ENVIRONMENTAL PROTECTION
+##
 
 # This is generally the guys with guns section. TBD.
 
@@ -2034,9 +2014,17 @@ satisfies:
 #        '//*
 #        Text goes here - testing
 #        */'
+##
+## BEGIN SECTION:
+## PLANNING
+##
 
 # This file is intentionally blank. Planning controls are the responsibility of
 # the organization (e.g. CxO Office), or the Program/Project Management Office.
+##
+## BEGIN SECTION:
+## PERSONNEL SECURITY
+##
 
 - control_key: PS-4
   standard_key: NIST-800-53
@@ -2061,6 +2049,10 @@ satisfies:
         credentials to be terminated/revoked, as well as the process for
         terminating or revoking each.
         */'
+##
+## BEGIN SECTION:
+## RISK ASSESSMENT
+##
 
 - control_key: RA-5
   standard_key: NIST-800-53
@@ -2077,6 +2069,10 @@ satisfies:
         personnel responsible for ensuring that timeframe requirements are
         met.
         */'
+##
+## BEGIN SECTION:
+## SYSTEM AND SERVICES ACQUISITION
+##
 
 - control_key: SA-10
   standard_key: NIST-800-53
@@ -2238,6 +2234,10 @@ satisfies:
         the tools in use, the means by which the tools are used to identify
         common flaws, and the process for documenting results of testing.
         */'
+##
+## BEGIN SECTION:
+## SYSTEMS AND COMMUNICATIONS PROTECTION
+##
 
 - control_key: SC-2
   standard_key: NIST-800-53
@@ -2361,8 +2361,8 @@ satisfies:
     - text: |
         '//*
         The customer will be responsible for implementing mechanisms to
-        ensure Red Hat OpenStack Platform 13 nodes to not act as proxy or relay servers between
-        internal and external networks.
+        ensure Red Hat OpenStack Platform 13 nodes to not act as proxy or
+        relay servers between internal and external networks.
         */'
 
 - control_key: SC-7 (12)
@@ -2384,9 +2384,9 @@ satisfies:
   narrative:
     - text: |
         '//*
-        The customer will be responsible for ensuring that Red Hat OpenStack Platform 13 is
-        isolated from other internal information system components by
-        implementing physically separate subnetworks with managed
+        The customer will be responsible for ensuring that Red Hat OpenStack
+        Platform 13 is isolated from other internal information system
+        components by implementing physically separate subnetworks with managed
         interfaces to other components of the system. A successful control
         response will discuss the networking configuration to satisfy this
         control.
@@ -2454,9 +2454,9 @@ satisfies:
         ciphers and protocols for all network sessions.
 
         Red Hat Enterprise Linux 7, the underlying operating system for
-        Red Hat OpenStack Platform 13, has achieved FIPS 140-2 certification. For documentation
-        of certifications, please visit the US Government Certifications
-        webpage:
+        Red Hat OpenStack Platform 13, has achieved FIPS 140-2 certification.
+        For documentation of certifications, please visit the US Government
+        Certifications webpage:
 
         https://www.redhat.com/en/technologies/industries/government/standards
 
@@ -2469,9 +2469,10 @@ satisfies:
   narrative:
     - text: |
         '//*
-        Red Hat OpenStack Platform 13 relies on the cryptographic services of the underlying
-        operating system, Red Hat Enterprise Linux. To ensure RHEL is configured
-        in FIPS mode, follow CCE-80359-3, "Enable FIPS Mode in GRUB2".
+        Red Hat OpenStack Platform 13 relies on the cryptographic
+        services of the underlying operating system, Red Hat Enterprise
+        Linux. To ensure RHEL is configured in FIPS mode, follow
+        CCE-80359-3, "Enable FIPS Mode in GRUB2".
         */'
 
 - control_key: SC-18
@@ -2562,8 +2563,8 @@ satisfies:
         various types of attacks against session authenticity and the
         mechanisms used to protect against those attacks.
 
-        Red Hat OpenStack Platform 13 uses various TLS algorithms and ciphers to protect
-        the authenticity of communications sessions.
+        Red Hat OpenStack Platform 13 uses various TLS algorithms and
+        ciphers to protect the authenticity of communications sessions.
         */'
 
 - control_key: SC-28
@@ -2591,9 +2592,10 @@ satisfies:
         transport.
 
         When running on Red Hat Enterprise Linux, full disk encryption
-        is possible for data at rest on the Red Hat OpenStack Platform 13 nodes. For data
-        in transport, Red Hat OpenStack Platform 13 uses cryptographic algorithms and ciphers to
-        protect confidentiality and integrity of data in transport.
+        is possible for data at rest on the Red Hat OpenStack Platform 13
+        nodes. For data in transport, Red Hat OpenStack Platform 13 uses
+        cryptographic algorithms and ciphers to protect confidentiality
+        and integrity of data in transport.
         */'
 
 - control_key: SC-39
@@ -2605,576 +2607,580 @@ satisfies:
         'Red Hat Enterprise Linux, when configured against USGCB settings,
         maintains separate execution domains for each executing process by
         assigning a private virtual address space to each process.'
+##
+## BEGINNING SECTION:
+## SYSTEM AND INFORMATION INTEGRITY
+##
+- control_key: SI-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for analyzing their applications for
+        flaws, reporting on those flaws, and correcting them. A successful
+        control response will include a discussion of the process by which
+        flaws are discovered and remediated, as well as tools that are used to
+        assist in detection and remediation.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for testing application updates
+        related to flaw remediation prior to installation. A successful
+        control response will discuss the testing process (e.g. the
+        nature of the test environment, the types of testing performed,
+        the tools in testing, etc.).
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for installing security-relevant
+        software updates to their application within 30 days of the release of
+        those updates. A successful control response will detail how the
+        customer ensures that this update schedule can be met while still
+        performing sufficient testing.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for incorporating flaw remediation
+        activities into their organizational configuration management process.
+        A successful control response will address how flaws are categorized
+        in terms of the types of changes that are subject to configuration
+        management, as well as the approval process for remediation activities
+        (see the CM family of controls).
+        */'
 
-  - control_key: SI-2
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - key: a
-        text: |
-          '//*
-          The customer will be responsible for analyzing their applications for
-          flaws, reporting on those flaws, and correcting them. A successful
-          control response will include a discussion of the process by which
-          flaws are discovered and remediated, as well as tools that are used to
-          assist in detection and remediation.
-          */'
-      - key: b
-        text: |
-          '//*
-          The customer will be responsible for testing application updates
-          related to flaw remediation prior to installation. A successful
-          control response will discuss the testing process (e.g. the
-          nature of the test environment, the types of testing performed,
-          the tools in testing, etc.).
-          */'
-      - key: c
-        text: |
-          '//*
-          The customer will be responsible for installing security-relevant
-          software updates to their application within 30 days of the release of
-          those updates. A successful control response will detail how the
-          customer ensures that this update schedule can be met while still
-          performing sufficient testing.
-          */'
-      - key: d
-        text: |
-          '//*
-          The customer will be responsible for incorporating flaw remediation
-          activities into their organizational configuration management process.
-          A successful control response will address how flaws are categorized
-          in terms of the types of changes that are subject to configuration
-          management, as well as the approval process for remediation activities
-          (see the CM family of controls).
-          */'
+- control_key: SI-2 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be required to employ automated mechanisms on a
+        monthly basis to determine the stat of information system components
+        with regard to flaw remediation on their information systems as
+        required by their organizations policy. A successful control response
+        will address the customers use of automated tools such as Nessus to
+        perform periodic and on-demand scans through their system to determine
+        the state of system components with regard to flaw remediation.
+        */'
 
-  - control_key: SI-2 (2)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be required to employ automated mechanisms on a
-          monthly basis to determine the stat of information system components
-          with regard to flaw remediation on their information systems as
-          required by their organizations policy. A successful control response
-          will address the customers use of automated tools such as Nessus to
-          perform periodic and on-demand scans through their system to determine
-          the state of system components with regard to flaw remediation.
-          */'
+- control_key: SI-2 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer is responsible for scanning for flaws in their
+        information systems and for measuring the time between flaw
+        identification and flaw remediation. A successful control response
+        will need to address the time between flaw identification and
+        remediation using timestamps and calculates the time elapsed
+        difference.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for scanning for flaws in their
+        information systems and for establishing benchmarks for taking
+        correctie actions according to their organizational policies. A
+        successful control response will need to address the use of
+        benchmarks to remediate high, and moderate risk flaws within a cusotmer
+        defined period after a flaws discovery.
+        */'
 
-  - control_key: SI-2 (3)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - key: a
-        text: |
-          '//*
-          The customer is responsible for scanning for flaws in their
-          information systems and for measuring the time between flaw
-          identification and flaw remediation. A successful control response
-          will need to address the time between flaw identification and
-          remediation using timestamps and calculates the time elapsed
-          difference.
-          */'
-      - key: b
-        text: |
-          '//*
-          The customer will be responsible for scanning for flaws in their
-          information systems and for establishing benchmarks for taking
-          correctie actions according to their organizational policies. A
-          successful control response will need to address the use of
-          benchmarks to remediate high, and moderate risk flaws within a cusotmer
-          defined period after a flaws discovery.
-          */'
+- control_key: SI-3
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer is responsible for ensuring that they employ malicious
+        code protection at information system entry, and exit points to detect
+        and eradicate malicious code. A successful control response will need
+        to address use of code protection mechanisms to protect assets from
+        malicious software (i.e. Viruses, malware, rootkits, worms, and
+        scripts).
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer is responsible for ensuring that they update their
+        malicious code protection mechanisms whenever new releases are available
+        in accordance with organizational configuration management policy and
+        procedures. A successful control response will need to address that
+        the protection mechanisms stated in Part A of this control are updated
+        when a new version or definition release becomes available.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer is responsible for ensuring that their malicious code
+        protection mechanisms will perform periodic scans on a weekly basis. The
+        customer will perform realtime scans of files from all external sources,
+        including endpoints as the files are downloaded, opened, or executed
+        in accordance with organizational security policy. The customer will
+        also send alerts to an administrator or another defined security
+        personnel in response to detected malicious code.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer is responsible for addressing the receipt of false
+        positives during malicious code detection and eradication. These false
+        positives will report potnetial impact of the availability of the
+        information system. A successful control response will detail the steps
+        taken when false positives are detected within the system with the
+        resulting impact of availability to the information system.
+        */'
 
-  - control_key: SI-3
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - key: a
-        text: |
-          '//*
-          The customer is responsible for ensuring that they employ malicious
-          code protection at information system entry, and exit points to detect
-          and eradicate malicious code. A successful control response will need
-          to address use of code protection mechanisms to protect assets from
-          malicious software (i.e. Viruses, malware, rootkits, worms, and
-          scripts).
-          */'
-      - key: b
-        text: |
-          '//*
-          The customer is responsible for ensuring that they update their
-          malicious code protection mechanisms whenever new releases are available
-          in accordance with organizational configuration management policy and
-          procedures. A successful control response will need to address that
-          the protection mechanisms stated in Part A of this control are updated
-          when a new version or definition release becomes available.
-          */'
-      - key: c
-        text: |
-          '//*
-          The customer is responsible for ensuring that their malicious code
-          protection mechanisms will perform periodic scans on a weekly basis. The
-          customer will perform realtime scans of files from all external sources,
-          including endpoints as the files are downloaded, opened, or executed
-          in accordance with organizational security policy. The customer will
-          also send alerts to an administrator or another defined security
-          personnel in response to detected malicious code.
-          */'
-      - key: d
-        text: |
-          '//*
-          The customer is responsible for addressing the receipt of false
-          positives during malicious code detection and eradication. These false
-          positives will report potnetial impact of the availability of the
-          information system. A successful control response will detail the steps
-          taken when false positives are detected within the system with the
-          resulting impact of availability to the information system.
-          */'
+- control_key: SI-3 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer is responsible for ensuring that their malicious code
+        protection mechanisms are centrally managed. A successful control
+        response will need to address that the planning, implementing,
+        assessing, authorizing and monitoring of their malicious code protection
+        mechanism is centered in one location.
+        */'
 
-  - control_key: SI-3 (1)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer is responsible for ensuring that their malicious code
-          protection mechanisms are centrally managed. A successful control
-          response will need to address that the planning, implementing,
-          assessing, authorizing and monitoring of their malicious code protection
-          mechanism is centered in one location.
-          */'
+- control_key: SI-3 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer is responsible for ensuring that they update their
+        malicious code protection mechanisms automatically when new versions/
+        definitions become available. A successful control response will need
+        to address that the employed malicious code protection
+        mechanisms definitions are configured to be updated automatically.
+        */'
 
-  - control_key: SI-3 (2)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer is responsible for ensuring that they update their
-          malicious code protection mechanisms automatically when new versions/
-          definitions become available. A successful control response will need
-          to address that the employed malicious code protection
-          mechanisms definitions are configured to be updated automatically.
-          */'
+- control_key: SI-3 (7)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer is responsible for ensuring that they implement a
+        nonsignature-based malicious code detection mechanism on their
+        information system. A successful control response will need to address
+        a nonsignature based detection mechanism that can detect, analyze and
+        describe the characteristics or behavior of malicious code and
+        could provide safeguards against malicious code for which signatures
+        do not yet exist.
+        */'
 
-  - control_key: SI-3 (7)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer is responsible for ensuring that they implement a
-          nonsignature-based malicious code detection mechanism on their
-          information system. A successful control response will need to address
-          a nonsignature based detection mechanism that can detect, analyze and
-          describe the characteristics or behavior of malicious code and
-          could provide safeguards against malicious code for which signatures
-          do not yet exist.
-          */'
+- control_key: SI-4
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for meeting the FedRAMP-defined
+        monitoring objective of ensuring the proper functioning of internal
+        processes and controls in furtherance of regulatory and compliance
+        requirements; examine system records to confirm that the system
+        is functioning in an optimal, resilient, and secure state; identify
+        irregularities or anomalies that are indicators of a system malfunction
+        or compromise. It is common for network service providers to impliment
+        this control on behalf of infrastructure components. A successful
+        control response must articulate how  both technology and process is
+        used to identify attacks and indicators of potential attacks.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for monitoring local, network, and
+        remote connections. In modern IT systems, it is common for all
+        connection types to be classified as remote. A successful control
+        response will indicate if all connections are considered remote, and if
+        not, how each category is uniquely monitored.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer is responsible for deploying monitoring devices at
+        strategic and ad-hoc locations within the system. A successful control
+        response will identify the locations where monitoring devices will be
+        implimented. It is common for network service providers to implement
+        this control on behalf of tenants.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for protecting information obtained
+        from intrusion-monitoring tools from unauthorized access, modification,
+        and deletion. A successful control response will indicate data access
+        and management processes to ensure protection of the gathered data. It
+        is common for network service providers to implement this control
+        on behalf of tenants.
+        */'
+    - key: e
+      text: |
+        '//*
+        The information system must be capable of heightening the level of
+        monitoring during times of duress. A successful control response
+        will indicate increasing tiers of monitoring and analysis that is
+        available should a known, or suspected, attack occur. It is common
+        for network service providers to implement this control on behalf
+        of tenants. For example, Microsoft Azure for Government implements
+        this control on behalf of their IaaS users.
+        */'
+    - key: g
+      text: |
+        '//*
+        The customer will be responsible to ensure monitoring is aligned with
+        SI-4(a), that organizationally defined personnel or roles receive
+        monitoring information daily (and with capabilities for ondemand
+        inquiries). A successful control response will address the reporting
+        available to appropriate staff, and how on-demand reports can be
+        created. It is common for network service providers to implement this
+        control on behalf of tenants.
+        */'
 
-  - control_key: SI-4
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - key: a
-        text: |
-          '//*
-          The customer will be responsible for meeting the FedRAMP-defined
-          monitoring objective of ensuring the proper functioning of internal
-          processes and controls in furtherance of regulatory and compliance
-          requirements; examine system records to confirm that the system
-          is functioning in an optimal, resilient, and secure state; identify
-          irregularities or anomalies that are indicators of a system malfunction
-          or compromise. It is common for network service providers to impliment
-          this control on behalf of infrastructure components. A successful
-          control response must articulate how  both technology and process is
-          used to identify attacks and indicators of potential attacks.
-          */'
-      - key: b
-        text: |
-          '//*
-          The customer will be responsible for monitoring local, network, and
-          remote connections. In modern IT systems, it is common for all
-          connection types to be classified as remote. A successful control
-          response will indicate if all connections are considered remote, and if
-          not, how each category is uniquely monitored.
-          */'
-      - key: c
-        text: |
-          '//*
-          The customer is responsible for deploying monitoring devices at
-          strategic and ad-hoc locations within the system. A successful control
-          response will identify the locations where monitoring devices will be
-          implimented. It is common for network service providers to implement
-          this control on behalf of tenants.
-          */'
-      - key: d
-        text: |
-          '//*
-          The customer will be responsible for protecting information obtained
-          from intrusion-monitoring tools from unauthorized access, modification,
-          and deletion. A successful control response will indicate data access
-          and management processes to ensure protection of the gathered data. It
-          is common for network service providers to implement this control
-          on behalf of tenants.
-          */'
-      - key: e
-        text: |
-          '//*
-          The information system must be capable of heightening the level of
-          monitoring during times of duress. A successful control response
-          will indicate increasing tiers of monitoring and analysis that is
-          available should a known, or suspected, attack occur. It is common
-          for network service providers to implement this control on behalf
-          of tenants. For example, Microsoft Azure for Government implements
-          this control on behalf of their IaaS users.
-          */'
-      - key: g
-        text: |
-          '//*
-          The customer will be responsible to ensure monitoring is aligned with
-          SI-4(a), that organizationally defined personnel or roles receive
-          monitoring information daily (and with capabilities for ondemand
-          inquiries). A successful control response will address the reporting
-          available to appropriate staff, and how on-demand reports can be
-          created. It is common for network service providers to implement this
-          control on behalf of tenants.
-          */'
+- control_key: SI-4 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for integrating intrusion detection
+        tools into the Red Hat OpenStack Platform 13 environment, and
+        documenting how this capability is integrated into enterprise-wide
+        intrusion detection systems when applicable. A successful control
+        response will address the workflow between local and enterprise
+        intrusion detection systems.
+        */'
 
-  - control_key: SI-4 (1)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for integrating intrusion detection
-          tools into the Red Hat OpenStack Platform 13 environment, and documenting how this
-          capability is integrated into enterprise-wide intrusion detection
-          systems when applicable. A successful control response will address
-          the workflow between local and enterprise intrusion detection
-          systems.
-          */'
+- control_key: SI-4 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for deploying automated tools to
+        support near real-time analysis of events in their infrastructure. This
+        is frequently provided by corporate services outside the informarion
+        system, e.g. centralized security operation centers may host an
+        enterprise logging solution. A successful control response will
+        indicate who is responsible for hosting such capabilities, and what
+        technology and processes are in place to support near-realtime
+        analysis of events.
+        */'
 
-  - control_key: SI-4 (2)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for deploying automated tools to
-          support near real-time analysis of events in their infrastructure. This
-          is frequently provided by corporate services outside the informarion
-          system, e.g. centralized security operation centers may host an
-          enterprise logging solution. A successful control response will
-          indicate who is responsible for hosting such capabilities, and what
-          technology and processes are in place to support near-realtime
-          analysis of events.
-          */'
+- control_key: SI-4 (4)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for identifying how and where
+        network traffic is continuously monitored. Frequently this control
+        is inherited from network and Infrastructure as a Service providers,
+        such as Microsoft Azure. A successful control response will indicate
+        if this control is inherited from infrastructure providers, and if not,
+        how network traffic is continuously monitored.
+        */'
 
-  - control_key: SI-4 (4)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for identifying how and where
-          network traffic is continuously monitored. Frequently this control
-          is inherited from network and Infrastructure as a Service providers,
-          such as Microsoft Azure. A successful control response will indicate
-          if this control is inherited from infrastructure providers, and if not,
-          how network traffic is continuously monitored.
-          */'
+- control_key: SI-4 (5)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for automatic notification of
+        appropriate staff when indicators of compromise are detected. Frequently
+        this is accomplished by automatic alerting to Security Operations Center
+        staff. A successful control response will indicate who is notified, by
+        name or position title(s), and the mechanism of the notification.
+        */'
 
-  - control_key: SI-4 (5)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for automatic notification of
-          appropriate staff when indicators of compromise are detected. Frequently
-          this is accomplished by automatic alerting to Security Operations Center
-          staff. A successful control response will indicate who is notified, by
-          name or position title(s), and the mechanism of the notification.
-          */'
+- control_key: SI-4 (14)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        'An Red Hat OpenStack Platform 13 infrastructure does not have
+        wireless capabilities. This control is Not Applicable.
+        */'
 
-  - control_key: SI-4 (14)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          'An Red Hat OpenStack Platform 13 infrastructure does not have wireless capabilities. This
-          control is Not Applicable.
-          */'
+- control_key: SI-4 (16)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for aggregating and correlating
+        information from monitoring tools, for multiple system components. This
+        is frequently accomplished with centralized audit reduction tools.
+        */'
 
-  - control_key: SI-4 (16)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for aggregating and correlating
-          information from monitoring tools, for multiple system components. This
-          is frequently accomplished with centralized audit reduction tools.
-          */'
+- control_key: SI-4 (23)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for installing host-based monitoring
+        mechanisms. A successful control response will need to discuss how
+        various elements of the Red Hat OpenStack Platform 13 infrastructure
+        are monitored.
+        */'
 
-  - control_key: SI-4 (23)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for installing host-based monitoring
-          mechanisms. A successful control response will need to discuss how
-          various elements of the Red Hat OpenStack Platform 13 infrastructure are monitored.
-          */'
+- control_key: SI-5
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for recieving relevant security
+        alerts, advisories and directives. A successful control response will
+        need to discuss the external sources of security alerts, advisories, and
+        directives (including US-CERT as required by FedRAMP).
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for implementing security directives
+        within customer-controlled operating systems, software, and services. A
+        successful control response will need to address how the organization
+        meets established time frames for implementing security directives.
+        */'
 
-  - control_key: SI-5
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - key: a
-        text: |
-          '//*
-          The customer will be responsible for recieving relevant security
-          alerts, advisories and directives. A successful control response will
-          need to discuss the external sources of security alerts, advisories, and
-          directives (including US-CERT as required by FedRAMP).
-          */'
-      - key: d
-        text: |
-          '//*
-          The customer will be responsible for implementing security directives
-          within customer-controlled operating systems, software, and services. A
-          successful control response will need to address how the organization
-          meets established time frames for implementing security directives.
-          */'
+- control_key: SI-6
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for verifying the correct operation
+        of security functions within customer-controlled operating systems and
+        software. A successful control response will need to discuss the
+        security functions deemed necessary to verify, as well as the means for
+        testing the correct operation and resolving any issues found.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for performing security function
+        verification at customer-specified frequencies and under
+        customer-specified circumstances (to include the requirements stated by
+        FedRAMP). A successful control response will need to address the
+        rationale for selection of the specific frequency and circumstances
+        of security function verification.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for notifying appropriate personnel
+        of failed security verification tests. A successful control response
+        will need to outline the personnel or roles selected (to include
+        system administrators and security personnel as required by FedRAMP).
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for performing appropriate actions
+        in response to anomalies in security unction verifiation. A successful
+        control response will need to discuss the actions taken (to include
+        notification of system administrators and security personnel as
+        required by FedRAMP) as well as the rationale for selecting these
+        actions.
+        */'
 
-  - control_key: SI-6
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - key: a
-        text: |
-          '//*
-          The customer will be responsible for verifying the correct operation
-          of security functions within customer-controlled operating systems and
-          software. A successful control response will need to discuss the
-          security functions deemed necessary to verify, as well as the means for
-          testing the correct operation and resolving any issues found.
-          */'
-      - key: b
-        text: |
-          '//*
-          The customer will be responsible for performing security function
-          verification at customer-specified frequencies and under
-          customer-specified circumstances (to include the requirements stated by
-          FedRAMP). A successful control response will need to address the
-          rationale for selection of the specific frequency and circumstances
-          of security function verification.
-          */'
-      - key: c
-        text: |
-          '//*
-          The customer will be responsible for notifying appropriate personnel
-          of failed security verification tests. A successful control response
-          will need to outline the personnel or roles selected (to include
-          system administrators and security personnel as required by FedRAMP).
-          */'
-      - key: d
-        text: |
-          '//*
-          The customer will be responsible for performing appropriate actions
-          in response to anomalies in security unction verifiation. A successful
-          control response will need to discuss the actions taken (to include
-          notification of system administrators and security personnel as
-          required by FedRAMP) as well as the rationale for selecting these
-          actions.
-          */'
+- control_key: SI-7
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for employing integrity verification
+        tools for customer-controlled operating systems and software. A
+        successful control response will need to discuss the tools in use and
+        the integrity-checking mechanisms these tools employ.
+        */'
 
-  - control_key: SI-7
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for employing integrity verification
-          tools for customer-controlled operating systems and software. A
-          successful control response will need to discuss the tools in use and
-          the integrity-checking mechanisms these tools employ.
-          */'
+- control_key: SI-7 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for performing integrity checks at
+        customer-specific frequencies and under customer-specified
+        circumstances (including frequencies and circumstances specified by
+        FedRAMP). A successful control response will need to identify the
+        criteria for performing integrity checking, as well as the rationale
+        for selecting those criteria.
+        */'
 
-  - control_key: SI-7 (1)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for performing integrity checks at
-          customer-specific frequencies and under customer-specified
-          circumstances (including frequencies and circumstances specified by
-          FedRAMP). A successful control response will need to identify the
-          criteria for performing integrity checking, as well as the rationale
-          for selecting those criteria.
-          */'
+- control_key: SI-7 (7)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for incorporating the detection of
+        customer-defined security-relevant changes into the customers incident
+        response capability. A successful control response will need to
+        outline the process for deeming particular changes as
+        security-relevant and the means by which the incident response
+        capability is invoked when needed.
+        */'
 
-  - control_key: SI-7 (7)
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for incorporating the detection of
-          customer-defined security-relevant changes into the customers incident
-          response capability. A successful control response will need to
-          outline the process for deeming particular changes as
-          security-relevant and the means by which the incident response
-          capability is invoked when needed.
-          */'
+- control_key: SI-10
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for checking the validity of
+        information inputs to customer-controlled operating systems and
+        software. A successful control response will need to discuss the
+        specific inputs for which the validity is checked, the rationale
+        for selecting those inputs for validity checking, and the response
+        taken by the system to invalid inputs.
+        */'
 
-  - control_key: SI-10
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for checking the validity of
-          information inputs to customer-controlled operating systems and
-          software. A successful control response will need to discuss the
-          specific inputs for which the validity is checked, the rationale
-          for selecting those inputs for validity checking, and the response
-          taken by the system to invalid inputs.
-          */'
+- control_key: SI-11
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for generating error messages in
+        cusomer-controlled operating systems and software that provide
+        information necessary for corrective actions without revealing
+        information that could be exploited by adversaries. A successful
+        control response will need to discuss the process by which error
+        messages are created, analyzed, and corrected when necessary.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for revealing error messages only to
+        authorized personnel. A successful control response will need to
+        address how error messages are displayed and the means by which access
+        to error messages is controlled.
+        */'
 
-  - control_key: SI-11
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - key: a
-        text: |
-          '//*
-          The customer will be responsible for generating error messages in
-          cusomer-controlled operating systems and software that provide
-          information necessary for corrective actions without revealing
-          information that could be exploited by adversaries. A successful
-          control response will need to discuss the process by which error
-          messages are created, analyzed, and corrected when necessary.
-          */'
-      - key: b
-        text: |
-          '//*
-          The customer will be responsible for revealing error messages only to
-          authorized personnel. A successful control response will need to
-          address how error messages are displayed and the means by which access
-          to error messages is controlled.
-          */'
+- control_key: SI-12
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for handling and retaining
+        information within customer-enrolled  systems and software in
+        accordance with applicable federal laws, Executive Orders,
+        directives, policies, regulations, standards, and operational
+        requirements. A successful control response will need to outline
+        the specific requirements applicable to customer information
+        handling and retention, and the means by which those requirements
+        are met.
+        */'
 
-  - control_key: SI-12
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          The customer will be responsible for handling and retaining
-          information within customer-enrolled  systems and software in
-          accordance with applicable federal laws, Executive Orders,
-          directives, policies, regulations, standards, and operational
-          requirements. A successful control response will need to outline
-          the specific requirements applicable to customer information
-          handling and retention, and the means by which those requirements
-          are met.
-          */'
+- control_key: SI-16
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Memory and unauthorized code protection mechanisms are provided in
+        the base operating system, Red Hat Enterprise Linux. This includes
+        buffer overflow protection, execution of code on a process’ or
+        thread’s stack, modification of a function return address on the
+        process’ or threads stack to jump to previously known processor
+        instructions, and modification of process section other than the
+        segment that holds compile time initialized data and segment holding
+        the mapping of all uninitialized variables. For the runtime instances
+        of binaries, all user-provided applications and their depending
+        libraries that are compiled and linked with the following properties:
 
-  - control_key: SI-16
-    standard_key: NIST-800-53
-    covered_by: []
-    implementation_status: none
-    narrative:
-      - text: |
-          '//*
-          Memory and unauthorized code protection mechanisms are provided in
-          the base operating system, Red Hat Enterprise Linux. This includes
-          buffer overflow protection, execution of code on a process’ or
-          thread’s stack, modification of a function return address on the
-          process’ or threads stack to jump to previously known processor
-          instructions, and modification of process section other than the
-          segment that holds compile time initialized data and segment holding
-          the mapping of all uninitialized variables. For the runtime instances
-          of binaries, all user-provided applications and their depending
-          libraries that are compiled and linked with the following properties:
+        (1) presence of the ELF program header entry of PT_GNU_STACK and the
+        absence of the PF_X bit in the p_flags ELF header flags;
 
-          (1) presence of the ELF program header entry of PT_GNU_STACK and the
-          absence of the PF_X bit in the p_flags ELF header flags;
+        (2) presence of the ELF program header entry of PT_GNU_RELRO with
+        memory range information covering the following ELF sections: .tdata,
+        .preinit_array, .init_array, .fini_array, .ctors, .dtors,
+        .data.rel.ro, .dynamic, .got including .got.plt. The secure state
+        implied with this functionality covers the following aspects where
+        the following list explains the implication of each bullet above:
 
-          (2) presence of the ELF program header entry of PT_GNU_RELRO with
-          memory range information covering the following ELF sections: .tdata,
-          .preinit_array, .init_array, .fini_array, .ctors, .dtors,
-          .data.rel.ro, .dynamic, .got including .got.plt. The secure state
-          implied with this functionality covers the following aspects where
-          the following list explains the implication of each bullet above:
+           a) When exploiting buffer overruns of an application, the
+              attacker cannot feed code onto the stack and execute it.
 
-             a) When exploiting buffer overruns of an application, the
-                attacker cannot feed code onto the stack and execute it.
+           b) When exploiting buffer overruns of an application, the
+              modify of the return addresses stored on a stack jump to a
+              previously known code segment is much harder to achieve by
+              an attacker. Due to the address randomization, any memory
+              address of code already present with the application or
+              loaded libraries will be different with each startup of the
+              application.
 
-             b) When exploiting buffer overruns of an application, the
-                modify of the return addresses stored on a stack jump to a
-                previously known code segment is much harder to achieve by
-                an attacker. Due to the address randomization, any memory
-                address of code already present with the application or
-                loaded libraries will be different with each startup of the
-                application.
+           c) The ELF header sections listed above are set read-only using
+              the mprotect system call by the loaded before the application
+              gains control. When exploiting buffer overruns, the attacker
+              cannot modify information in those memory sections. These
+              sections store offset tables required for the dynamic linking
+              mechanism and, if abused, allow attackers to modify the jump
+              addresses of object accesses. Full protection against this
+              type of attack can only be achieved if the application and
+              all depending shared libraries are compiled linked with full
+              protection enabled. When at least one shared libraroy the
+              application depends on or the application itself is compiled
+              and linked with partial protection, only partial protection
+              against this type of attack is available for the given
+              application.
 
-             c) The ELF header sections listed above are set read-only using
-                the mprotect system call by the loaded before the application
-                gains control. When exploiting buffer overruns, the attacker
-                cannot modify information in those memory sections. These
-                sections store offset tables required for the dynamic linking
-                mechanism and, if abused, allow attackers to modify the jump
-                addresses of object accesses. Full protection against this
-                type of attack can only be achieved if the application and
-                all depending shared libraries are compiled linked with full
-                protection enabled. When at least one shared libraroy the
-                application depends on or the application itself is compiled
-                and linked with partial protection, only partial protection
-                against this type of attack is available for the given
-                application.
+        To enforce functionality in bullet a), /proc/sys/kernel/exec-shield
+        must contain either a 1 or 2.
 
-          To enforce functionality in bullet a), /proc/sys/kernel/exec-shield
-          must contain either a 1 or 2.
+        To enforce the functionality in bullet b),
+        /proc/sys/kernel/randomize_va_space must contain a 2 (1 implies the
+        address randomization is enabled except for the brk system call).
 
-          To enforce the functionality in bullet b),
-          /proc/sys/kernel/randomize_va_space must contain a 2 (1 implies the
-          address randomization is enabled except for the brk system call).
+        For full documentation on common criteria evaluated memory
+        protections,  Red Hat publishes full common criteria paperwork
+        online:
 
-          For full documentation on common criteria evaluated memory
-          protections,  Red Hat publishes full common criteria paperwork
-          online:
-
-          https://www.redhat.com/en/technologies/industries/government/standards
-          */'
+        https://www.redhat.com/en/technologies/industries/government/standards
+        */'
